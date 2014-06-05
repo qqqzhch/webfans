@@ -1,0 +1,31 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import '_sprites.scss';
+h1 {}
+
+h2 {} 
+
+.mytest {
+    width: 200px;
+    color: #eee;
+}
+.mying1{
+	
+	background: sprite($my-icons-sprite,'a11') no-repeat;
+}
+.mying3{
+	
+	background: sprite($my-icons-sprite,'a33') no-repeat;
+}
+.mying4{
+	
+	background: sprite($my-icons-sprite,'a4444') no-repeat;
+}
+.mying5{
+	
+	background: sprite($my-icons-sprite,'a555') no-repeat;
+}
