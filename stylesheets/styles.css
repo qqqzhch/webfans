@@ -67,38 +67,86 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 12, ../sass/screen.scss */
+/* line 13, ../sass/screen.scss */
 .mytest {
   width: 200px;
   color: #eee;
 }
 
-/* line 16, ../sass/screen.scss */
+/* line 17, ../sass/screen.scss */
 .mying1 {
   width: 300px;
   height: 300px;
   background: url('/images/Sprites-sd1aac17772.png') 0 -2288px no-repeat;
 }
 
-/* line 21, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 .mying3 {
   width: 300px;
   height: 300px;
   background: url('/images/Sprites-sd1aac17772.png') 0 0 no-repeat;
 }
 
-/* line 26, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
 .mying4 {
   width: 300px;
   height: 300px;
   background: url('/images/Sprites-sd1aac17772.png') 0 -1884px no-repeat;
 }
 
-/* line 31, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 .mying5 {
   width: 300px;
   height: 300px;
   background: url('/images/Sprites-sd1aac17772.png') 0 -1024px no-repeat;
+}
+
+/* line 40, ../sass/screen.scss */
+.ctest1 {
+  background-color: #511210;
+  color: #e7e7e7;
+}
+
+/* line 43, ../sass/screen.scss */
+.ctest2 {
+  background-color: #105813;
+  color: #e7e7e7;
+}
+
+/* line 46, ../sass/screen.scss */
+.ctest3 {
+  background-color: #151053;
+  color: #e7e7e7;
+}
+
+/* line 49, ../sass/screen.scss */
+.ctest4 {
+  background-color: #b96624;
+  color: #333333;
+}
+
+/* line 52, ../sass/screen.scss */
+.ctest5 {
+  background-color: #312e2e;
+  color: #e7e7e7;
+}
+
+/* line 55, ../sass/screen.scss */
+.ctest6 {
+  background-color: #ebeb1c;
+  color: #333333;
+}
+
+/* line 58, ../sass/screen.scss */
+.ctest7 {
+  background-color: #571210;
+  color: #e7e7e7;
+}
+
+/* line 61, ../sass/screen.scss */
+.ctest8 {
+  background-color: #581210;
+  color: #e7e7e7;
 }
 
 /* Welcome to Compass. Use this file to write IE specific override styles.

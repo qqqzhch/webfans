@@ -5,6 +5,7 @@
 
 @import "compass/reset";
 @import '_sprites.scss';
+@import "compass/utilities/color/contrast";
 h1 {}
 
 h2 {} 
@@ -32,4 +33,31 @@ h2 {}
 	width: 300px;
 	height: 300px;
 	background: sprite($my-icons-sprite,'a555') no-repeat;
+}
+
+$contrasted-dark-default: #333333;
+$contrasted-light-default: #e7e7e7;
+.ctest1{
+@include contrasted(#511210);
+}
+.ctest2{
+@include contrasted(#105813);
+}
+.ctest3{
+@include contrasted(#151053);
+}
+.ctest4{
+@include contrasted(#B96624);
+}
+.ctest5{
+@include contrasted(#312E2E);
+}
+.ctest6{
+@include contrasted(#EBEB1C);
+}
+.ctest7{
+@include contrasted(#571210);
+}
+.ctest8{
+@include contrasted(#581210);
 }
