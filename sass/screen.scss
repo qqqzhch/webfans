@@ -6,6 +6,7 @@
 @import "compass/reset";
 @import '_sprites.scss';
 @import "compass/utilities/color/contrast";
+@import "compass/utilities/general";
 h1 {}
 
 h2 {} 
@@ -60,4 +61,48 @@ $contrasted-light-default: #e7e7e7;
 }
 .ctest8{
 @include contrasted(#581210);
+}
+.g-clearfix{
+	border: 1px solid #000000;
+	@include clearfix();
+	@include pie-clearfix();
+	>div{
+		width: 300px;
+		height: 200px;
+		margin: 10px;
+		
+
+	}
+	.g-clearfix1{
+@include contrasted(#105813);
+@include  float(left);
+margin-left: 100px;
+width: 300px;
+	}
+	.g-clearfix2{
+		@include contrasted(#105813);
+		width: 300px;
+		@include  float(right);
+		margin-right: 100px;
+	}
+	.g-clearfix3{
+		@include contrasted(#105813);
+		width: 300px;
+	}
+	.g-clearfix4{
+		@include contrasted(#105813);
+
+	}
+}
+.m-width{
+ @include min-width(200px);
+ @include contrasted(#105813);
+ display: inline-block;
+}
+.m-height{
+@include min-height(200px);
+@include contrasted(#101813);
+}
+.mycloudtag{
+ @include 	tag-cloud()
 }

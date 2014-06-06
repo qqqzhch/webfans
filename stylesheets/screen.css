@@ -67,84 +67,186 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 13, ../sass/screen.scss */
+/* line 14, ../sass/screen.scss */
 .mytest {
   width: 200px;
   color: #eee;
 }
 
-/* line 17, ../sass/screen.scss */
+/* line 18, ../sass/screen.scss */
 .mying1 {
   width: 300px;
   height: 300px;
   background: url('/images/Sprites-sd1aac17772.png') 0 -2288px no-repeat;
 }
 
-/* line 22, ../sass/screen.scss */
+/* line 23, ../sass/screen.scss */
 .mying3 {
   width: 300px;
   height: 300px;
   background: url('/images/Sprites-sd1aac17772.png') 0 0 no-repeat;
 }
 
-/* line 27, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 .mying4 {
   width: 300px;
   height: 300px;
   background: url('/images/Sprites-sd1aac17772.png') 0 -1884px no-repeat;
 }
 
-/* line 32, ../sass/screen.scss */
+/* line 33, ../sass/screen.scss */
 .mying5 {
   width: 300px;
   height: 300px;
   background: url('/images/Sprites-sd1aac17772.png') 0 -1024px no-repeat;
 }
 
-/* line 40, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 .ctest1 {
   background-color: #511210;
   color: #e7e7e7;
 }
 
-/* line 43, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 .ctest2 {
   background-color: #105813;
   color: #e7e7e7;
 }
 
-/* line 46, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 .ctest3 {
   background-color: #151053;
   color: #e7e7e7;
 }
 
-/* line 49, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 .ctest4 {
   background-color: #b96624;
   color: #333333;
 }
 
-/* line 52, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 .ctest5 {
   background-color: #312e2e;
   color: #e7e7e7;
 }
 
-/* line 55, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 .ctest6 {
   background-color: #ebeb1c;
   color: #333333;
 }
 
-/* line 58, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 .ctest7 {
   background-color: #571210;
   color: #e7e7e7;
 }
 
-/* line 61, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 .ctest8 {
   background-color: #581210;
   color: #e7e7e7;
+}
+
+/* line 65, ../sass/screen.scss */
+.g-clearfix {
+  border: 1px solid #000000;
+  overflow: hidden;
+  *zoom: 1;
+  *zoom: 1;
+}
+/* line 38, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.g-clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 69, ../sass/screen.scss */
+.g-clearfix > div {
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+}
+/* line 76, ../sass/screen.scss */
+.g-clearfix .g-clearfix1 {
+  background-color: #105813;
+  color: #e7e7e7;
+  display: inline;
+  float: left;
+  margin-left: 100px;
+  width: 300px;
+}
+/* line 82, ../sass/screen.scss */
+.g-clearfix .g-clearfix2 {
+  background-color: #105813;
+  color: #e7e7e7;
+  width: 300px;
+  display: inline;
+  float: right;
+  margin-right: 100px;
+}
+/* line 88, ../sass/screen.scss */
+.g-clearfix .g-clearfix3 {
+  background-color: #105813;
+  color: #e7e7e7;
+  width: 300px;
+}
+/* line 92, ../sass/screen.scss */
+.g-clearfix .g-clearfix4 {
+  background-color: #105813;
+  color: #e7e7e7;
+}
+
+/* line 97, ../sass/screen.scss */
+.m-width {
+  min-width: 200px;
+  width: auto !important;
+  width: 200px;
+  background-color: #105813;
+  color: #e7e7e7;
+  display: inline-block;
+}
+
+/* line 102, ../sass/screen.scss */
+.m-height {
+  min-height: 200px;
+  height: auto !important;
+  height: 200px;
+  background-color: #101813;
+  color: #e7e7e7;
+}
+
+/* line 106, ../sass/screen.scss */
+.mycloudtag {
+  font-size: 1em;
+  line-height: 1.2em;
+}
+/* line 5, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_tag-cloud.scss */
+.mycloudtag .xxs, .mycloudtag .xs, .mycloudtag .s, .mycloudtag .l, .mycloudtag .xl, .mycloudtag .xxl {
+  line-height: 1.2em;
+}
+/* line 7, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_tag-cloud.scss */
+.mycloudtag .xxs {
+  font-size: 0.5em;
+}
+/* line 9, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_tag-cloud.scss */
+.mycloudtag .xs {
+  font-size: 0.66667em;
+}
+/* line 11, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_tag-cloud.scss */
+.mycloudtag .s {
+  font-size: 0.75em;
+}
+/* line 13, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_tag-cloud.scss */
+.mycloudtag .l {
+  font-size: 1.33333em;
+}
+/* line 15, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_tag-cloud.scss */
+.mycloudtag .xl {
+  font-size: 1.5em;
+}
+/* line 17, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_tag-cloud.scss */
+.mycloudtag .xxl {
+  font-size: 2em;
 }
