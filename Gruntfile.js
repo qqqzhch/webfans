@@ -81,6 +81,43 @@ module.exports = function(grunt) {
                     config: 'config.rb'
                 }
             }
+        },
+        jst: {
+
+            options: {
+                amd: true, // define()的方法包裹生成的内容
+                namespace: false,
+                // prettify: true, // 生成的内容在一行
+                templateSettings: {
+                    evaluate: /{%([\s\S]+?)%}/g,
+                    interpolate: /{{([\s\S]+?)}}/g,
+                    escape: /{%-([\s\S]+?)%}/g
+                }
+            },
+            // files: {
+            //     src: 'js/app/*/tpl/*.html',
+            //     dest: 'js/app/$1/tpljs/$2.js'
+            // }
+            files: {
+                expand: true, // 开启构建动态文件对象
+                cwd: 'js/app/', // 模板目录（源文件）
+                src: ['**/*.html'], // 能匹配到模板的二级目录
+                dest: 'js/app/', // 目标文件目录
+                rename: function(dest, src) {
+                    var path = require('path');
+                    var filename = path.basename(src);
+                    var dirname = path.dirname(src);
+                    dirname = dirname.replace('tpl', 'tpljs')
+                    var finalPath = path.resolve(dest, dirname, 'js', filename);
+
+                    console.log(dirname);
+                    console.log(finalPath);
+                    return finalPath;
+                },
+                ext: '.js' // 目标文件的后缀名
+            }
+
+
         }
 
 
