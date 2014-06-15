@@ -118,6 +118,42 @@ module.exports = function(grunt) {
             }
 
 
+        },
+        jshint: {
+            options: {
+                curly: true,
+                eqeqeq: false,
+                eqnull: true,
+                browser: true,
+                es3: true,
+                latedef: true,
+                newcap: true,
+                noarg: true,
+                noempty: true,
+                //quotmark: true,
+                undef: true,
+                strict: true,
+                maxdepth: 3,
+                maxstatements: 50,
+                maxlen: 255,
+                globals: {
+                    jQuery: true,
+                    $: true,
+                    require: true,
+                    define: true,
+                    Blueware: true,
+                    _: true,
+                    Backbone: true,
+                    ATM: true,
+                    console: true,
+                },
+            },
+            files: {
+                expand: true, // 开启构建动态文件对象
+                cwd: 'js/app/', // 模板目录（源文件）
+                src: ['*/*.js'], // 能匹配到模板的二级目录
+
+            }
         }
 
 
