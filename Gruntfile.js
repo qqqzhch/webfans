@@ -1,42 +1,44 @@
 module.exports = function(grunt) {
-    grunt.initConfig({
-        // r.js 打包 准备
-        var files = grunt.file.expand('js/app/*/main.js'); //读取要打包的js入口 一般都为 main的js
-        var requirejsOptions = {}; //用来存储 打包配置的对象
+    // r.js 打包 准备
+    var files = grunt.file.expand('js/app/*/main.js'); //读取要打包的js入口 一般都为 main的js
+    var requirejsOptions = {}; //用来存储 打包配置的对象
+    //遍历文件
+    files.forEach(function(file) {
+        var filenamelist = file.split('/');
+        var num = filenamelist.length;
+        var filename = filenamelist[num - 2]; //获取目录名称，因为这里的文件名都是main的js
+        requirejsOptions[filename] = {
+            options: {
+                baseUrl: "js/",
+                paths: {
+                    "text": 'lib/text',
+                    "jquery": 'lib/jquery',
+                    "backbone": 'lib/backbone',
+                    "underscore": 'lib/underscore',
+                    "Highcharts": 'lib/highcharts/highcharts',
+                    "select2": 'lib/select2/select2',
+                    "moment": 'lib/moment',
+                    "jquery-ui": 'lib/jquery-ui/jquery-ui',
+                    "jquery.cookie": 'lib/jquery.cookie',
+                    "validate": 'lib/jquery.validate',
+                    "metadata": 'lib/jquery.metadata',
+                    "jsplumb": "lib/jquery.jsPlumb",
+                    "qtip": 'lib/qtip/jquery.qtip',
+                    "nicescroll": "lib/jquery.nicescroll",
+                    "Htheme": 'lib/highcharts/theme',
+                    'jquery.mousewheel': 'lib/jquery.mousewheel'
+                },
+                optimizeAllPluginResources: true,
+                name: 'app/' + filename + '/main',
+                out: 'js/appbuild/' + filename + '/main.js'
+            }
+        };
+    });
+    //
 
-        //遍历文件
-        files.forEach(function(file) {
-            var filenamelist = file.split('/');
-            var num = filenamelist.length;
-            var filename = filenamelist[num - 2]; //获取目录名称，因为这里的文件名都是main的js
-            requirejsOptions[filename] = {
-                options: {
-                    baseUrl: "js/",
-                    paths: {
-                        "text": 'lib/text',
-                        "jquery": 'lib/jquery',
-                        "backbone": 'lib/backbone',
-                        "underscore": 'lib/underscore',
-                        "Highcharts": 'lib/highcharts/highcharts',
-                        "select2": 'lib/select2/select2',
-                        "moment": 'lib/moment',
-                        "jquery-ui": 'lib/jquery-ui/jquery-ui',
-                        "jquery.cookie": 'lib/jquery.cookie',
-                        "validate": 'lib/jquery.validate',
-                        "metadata": 'lib/jquery.metadata',
-                        "jsplumb": "lib/jquery.jsPlumb",
-                        "qtip": 'lib/qtip/jquery.qtip',
-                        "nicescroll": "lib/jquery.nicescroll",
-                        "Htheme": 'lib/highcharts/theme',
-                        'jquery.mousewheel': 'lib/jquery.mousewheel'
-                    },
-                    optimizeAllPluginResources: true,
-                    name: 'app/' + filename + '/main',
-                    out: 'js/appbuild/' + filename + '/main.js'
-                }
-            };
-        });
-        //
+
+    grunt.initConfig({
+
         pkg: grunt.file.readJSON('package.json'),
         // requirejs: requirejsOptions
         connect: {

@@ -7,6 +7,8 @@
 @import '_sprites.scss';
 @import "compass/utilities/color/contrast";
 @import "compass/utilities/general";
+@import "compass/utilities/tables";
+@import "compass/typography";
 h1 {}
 
 h2 {} 
@@ -105,4 +107,44 @@ width: 300px;
 }
 .mycloudtag{
  @include 	tag-cloud()
+}
+
+.table1{
+ table {
+    @include inner-table-borders(1px, #7a98c6);
+    @include outer-table-borders(2px);
+  }
+}
+.table2{
+ table {
+  @include table-scaffolding;
+  }
+}
+.table3{
+ table {
+ $table-color: #7a98c6;
+  @include alternating-rows-and-columns($table-color, adjust-hue($table-color, -120deg), #222222);
+  }
+}
+
+
+.t1{
+	li{
+		@include no-bullet();
+	}
+}
+.t2{
+	@include no-bullets();
+}
+.t3{
+  @include pretty-bullets('gotop.png', 5px, 5px, 30, 8)	
+}
+.t4{
+	@include horizontal-list(5px, right);
+}
+.t5{
+	@include inline-list();
+}
+.t6{
+	@include delimited-list('|')
 }

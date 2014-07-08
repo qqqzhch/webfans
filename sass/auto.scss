@@ -1,0 +1,14 @@
+@import 'compass';
+@import "compass/reset";
+
+@function emfn($target-px, $context) {
+  @return ($target-px / $context) * 1em;
+}
+
+*, *:before, *:after {
+  @include box-sizing('border-box');
+}
+
+h2 {
+  padding-left:  emfn(12px, 32px);
+}
